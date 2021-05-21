@@ -1,3 +1,4 @@
-import * as data from './united.json';
-const {name} = data;
-console.log(name); // output 'testing'
+fetch('../united.json')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(err => console.log(error));
