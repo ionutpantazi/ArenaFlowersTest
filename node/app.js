@@ -1,5 +1,5 @@
-var fs = require("fs");
-var http = require("http");
+import fs from 'fs';
+import http from 'http';
 
 const args = process.argv[2];
 
@@ -17,6 +17,6 @@ http.get("http://restcountries.eu/rest/v2/region/europe", function (response) {
 			return item.name.toLowerCase().search(args ? args.toLowerCase() : "") !== -1
 		}).map(({ name, capital }) => ({ countryName: name, capitalCity: capital }));
 		const result = { results: [...countries] };
-		fs.writeFileSync(args ? args + ".json" : "undefined.json", JSON.stringify(result, 0, 2));
+		fs.writeFileSync(args + ".json", JSON.stringify(result, 0, 2));
 	});
 });

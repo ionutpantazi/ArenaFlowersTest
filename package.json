@@ -1,14 +1,15 @@
 {
   "name": "arenaflowerstest",
   "version": "1.0.0",
-  "description": "",
+  "description": "test",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src -d lib"
+    "build": "babel src -d lib --copy-files",
+    "countries": "cd node && node app"
   },
-  "author": "",
+  "author": "IonutPantazi",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.14.3",
